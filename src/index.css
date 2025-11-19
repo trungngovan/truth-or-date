@@ -38,9 +38,10 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #000000;
+  background: linear-gradient(135deg, #1a0b2e 0%, #16213e 100%);
   color: #ffffff;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 #root {
@@ -70,26 +71,6 @@ body {
 
 .neon-box-glow-purple {
   box-shadow: var(--glow-purple);
-}
-
-/* Scanlines effect */
-.scanlines {
-  position: relative;
-}
-
-.scanlines::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.03) 0px,
-    transparent 1px,
-    transparent 2px,
-    rgba(255, 255, 255, 0.03) 3px
-  );
-  pointer-events: none;
-  z-index: 1;
 }
 
 /* Animations */

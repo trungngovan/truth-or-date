@@ -6,11 +6,9 @@ export type Difficulty = 'mild' | 'spicy' | 'wild';
 export interface Translations {
     ageVerification: {
         title: string;
-        warning: string;
-        question: string;
-        yesButton: string;
-        noButton: string;
-        disclaimer: string;
+        message: string;
+        confirm: string;
+        deny: string;
     };
     title: {
         truth: string;
@@ -24,6 +22,13 @@ export interface Translations {
         spicy: string;
         wild: string;
     };
+    buttons: {
+        truth: string;
+        dare: string;
+        next: string;
+    };
+    counter: string;
+    selectPrompt: string;
     game: {
         challengesCompleted: string;
         chooseChallenge: string;
@@ -50,11 +55,9 @@ export interface Translations {
 export const en: Translations = {
     ageVerification: {
         title: '18+ ONLY',
-        warning: 'This game contains <span class="text-neon-pink font-bold">adult content</span> including explicit sexual themes and mature language.',
-        question: 'Are you 18 years or older?',
-        yesButton: "Yes, I'm 18+",
-        noButton: 'No, Exit',
-        disclaimer: 'By entering, you confirm you are of legal age in your jurisdiction',
+        message: 'This game contains adult content including explicit sexual themes and mature language.',
+        confirm: "Yes, I'm 18+",
+        deny: 'No, Exit',
     },
     title: {
         truth: 'TRUTH',
@@ -68,6 +71,13 @@ export const en: Translations = {
         spicy: 'Spicy',
         wild: 'Wild',
     },
+    buttons: {
+        truth: 'TRUTH',
+        dare: 'DARE',
+        next: 'Next Player',
+    },
+    counter: 'Challenge {count}',
+    selectPrompt: 'Click "Next Player" to start',
     game: {
         challengesCompleted: 'Challenges Completed',
         chooseChallenge: 'Choose Your Challenge',
@@ -90,6 +100,16 @@ export const en: Translations = {
             "Where's the weirdest place you've had sex?",
             "Have you ever faked an orgasm? How many times?",
             "What's your most used porn category?",
+            "What is the most childish thing you still do?",
+            "Have you ever peed in a pool?",
+            "What is your guilty pleasure movie?",
+            "Who is your secret crush?",
+            "What is the last lie you told?",
+            "What is the most childish thing you still do?",
+            "Have you ever peed in a pool?",
+            "What is your guilty pleasure movie?",
+            "Who is your secret crush?",
+            "What is the last lie you told?",
         ],
         spicy: [
             "What's the most taboo sexual fantasy you have?",
@@ -102,6 +122,16 @@ export const en: Translations = {
             "Have you ever cheated on a partner? Details.",
             "What's something sexual you want to try but are too afraid to ask for?",
             "Have you ever recorded yourself during sex?",
+            "Have you ever sent a sext to the wrong person?",
+            "What is your favorite part of your body?",
+            "Have you ever had a friends with benefits arrangement?",
+            "What is the most expensive gift you've ever received from a partner?",
+            "Have you ever been attracted to a friend's partner?",
+            "Have you ever sent a sext to the wrong person?",
+            "What is your favorite part of your body?",
+            "Have you ever had a friends with benefits arrangement?",
+            "What is the most expensive gift you've ever received from a partner?",
+            "Have you ever been attracted to a friend's partner?",
         ],
         wild: [
             "Describe your last sexual encounter in detail.",
@@ -114,6 +144,16 @@ export const en: Translations = {
             "What's the most public place you've had sex and almost got caught?",
             "Have you ever been involved in any form of sex work?",
             "What sexual act do you secretly crave but would never admit out loud?",
+            "Have you ever had sex in a public place?",
+            "What is your wildest sexual fantasy?",
+            "Have you ever used food during sex?",
+            "What is the most number of times you've done it in one night?",
+            "Have you ever filmed a sex tape?",
+            "Have you ever had sex in a public place?",
+            "What is your wildest sexual fantasy?",
+            "Have you ever used food during sex?",
+            "What is the most number of times you've done it in one night?",
+            "Have you ever filmed a sex tape?",
         ],
     },
     dares: {
@@ -128,6 +168,16 @@ export const en: Translations = {
             "Show the group your sexiest photo",
             "Let someone of the group's choice sit on your lap for 3 rounds",
             "Remove one piece of clothing (your choice)",
+            "Do 10 squats.",
+            "Let the group look through your phone gallery for 1 minute.",
+            "Post a embarrassing photo on your Instagram story.",
+            "Talk in an accent for the next 3 rounds.",
+            "Let someone tickle you for 30 seconds.",
+            "Do 10 squats.",
+            "Let the group look through your phone gallery for 1 minute.",
+            "Post a embarrassing photo on your Instagram story.",
+            "Talk in an accent for the next 3 rounds.",
+            "Let someone tickle you for 30 seconds.",
         ],
         spicy: [
             "Make out with someone in the room for 30 seconds",
@@ -140,6 +190,16 @@ export const en: Translations = {
             "Let someone give you a body shot",
             "Sext with someone in the room for 5 minutes (show messages)",
             "Recreate your favorite position with someone here (clothed)",
+            "Twerk for 1 minute.",
+            "Kiss the person to your right on the cheek.",
+            "Let someone give you a hickey (or fake one).",
+            "Send a risky text to your ex.",
+            "Eat a piece of fruit seductively.",
+            "Twerk for 1 minute.",
+            "Kiss the person to your right on the cheek.",
+            "Let someone give you a hickey (or fake one).",
+            "Send a risky text to your ex.",
+            "Eat a piece of fruit seductively.",
         ],
         wild: [
             "Make out with the hottest person in the room for 2 minutes",
@@ -152,6 +212,16 @@ export const en: Translations = {
             "Share your screen and open your private browser history",
             "Take a body shot off someone's body (their choice where)",
             "Let someone undress you down to your underwear",
+            "Take off your shirt.",
+            "Lap dance for the person across from you.",
+            "Let the group choose a text to send to your crush.",
+            "French kiss the person to your left.",
+            "Let someone write something on your body with a marker.",
+            "Take off your shirt.",
+            "Lap dance for the person across from you.",
+            "Let the group choose a text to send to your crush.",
+            "French kiss the person to your left.",
+            "Let someone write something on your body with a marker.",
         ],
     },
 };
@@ -160,11 +230,9 @@ export const en: Translations = {
 export const vi: Translations = {
     ageVerification: {
         title: 'CHỈ DÀNH CHO 18+',
-        warning: 'Trò chơi này chứa <span class="text-neon-pink font-bold">nội dung người lớn</span> bao gồm chủ đề tình dục và ngôn ngữ trưởng thành.',
-        question: 'Bạn đã đủ 18 tuổi chưa?',
-        yesButton: 'Có, tôi 18+',
-        noButton: 'Không, Thoát',
-        disclaimer: 'Bằng cách vào, bạn xác nhận bạn đủ tuổi hợp pháp tại khu vực của bạn',
+        message: 'Trò chơi này chứa nội dung người lớn bao gồm chủ đề tình dục và ngôn ngữ trưởng thành.',
+        confirm: 'Có, tôi 18+',
+        deny: 'Không, Thoát',
     },
     title: {
         truth: 'SỰ THẬT',
@@ -178,6 +246,13 @@ export const vi: Translations = {
         spicy: 'Cay Nồng',
         wild: 'Bạo Liệt',
     },
+    buttons: {
+        truth: 'SỰ THẬT',
+        dare: 'THÁCH THỨC',
+        next: 'Người Chơi Tiếp Theo',
+    },
+    counter: 'Thử thách {count}',
+    selectPrompt: 'Nhấn "Người Chơi Tiếp Theo" để bắt đầu',
     game: {
         challengesCompleted: 'Thử Thách Hoàn Thành',
         chooseChallenge: 'Chọn Thử Thách Của Bạn',
@@ -200,6 +275,11 @@ export const vi: Translations = {
             "Nơi kỳ lạ nhất bạn từng quan hệ là đâu?",
             "Bạn đã bao giờ giả vờ cực khoái chưa? Bao nhiêu lần?",
             "Thể loại phim người lớn bạn xem nhiều nhất là gì?",
+            "Điều trẻ con nhất bạn vẫn làm là gì?",
+            "Bạn đã bao giờ tè trong hồ bơi chưa?",
+            "Bộ phim tội lỗi yêu thích của bạn là gì?",
+            "Crush bí mật của bạn là ai?",
+            "Lời nói dối gần nhất bạn nói là gì?",
         ],
         spicy: [
             "Tưởng tượng tình dục cấm kỵ nhất của bạn là gì?",
@@ -212,6 +292,11 @@ export const vi: Translations = {
             "Bạn đã bao giờ lừa dối người yêu chưa? Chi tiết.",
             "Điều gì về tình dục bạn muốn thử nhưng sợ không dám hỏi?",
             "Bạn đã bao giờ quay video khi quan hệ chưa?",
+            "Bạn đã bao giờ gửi tin nhắn sex nhầm người chưa?",
+            "Phần cơ thể nào bạn thích nhất?",
+            "Bạn đã bao giờ có mối quan hệ 'bạn bè lợi ích' chưa?",
+            "Món quà đắt nhất bạn từng nhận từ người yêu là gì?",
+            "Bạn đã bao giờ bị thu hút bởi người yêu của bạn chưa?",
         ],
         wild: [
             "Mô tả chi tiết lần quan hệ gần nhất của bạn.",
@@ -224,6 +309,11 @@ export const vi: Translations = {
             "Nơi công cộng nhất bạn từng quan hệ và suýt bị bắt là đâu?",
             "Bạn đã bao giờ tham gia vào bất kỳ hình thức công việc tình dục nào chưa?",
             "Hành động tình dục nào bạn thầm khao khát nhưng không bao giờ dám thừa nhận?",
+            "Bạn đã bao giờ quan hệ nơi công cộng chưa?",
+            "Tưởng tượng tình dục hoang dại nhất của bạn là gì?",
+            "Bạn đã bao giờ dùng đồ ăn khi quan hệ chưa?",
+            "Số lần nhiều nhất bạn làm chuyện ấy trong một đêm là bao nhiêu?",
+            "Bạn đã bao giờ quay phim sex chưa?",
         ],
     },
     dares: {
@@ -238,6 +328,11 @@ export const vi: Translations = {
             "Cho nhóm xem ảnh sexy nhất của bạn",
             "Để người mà nhóm chọn ngồi lên đùi bạn trong 3 vòng",
             "Cởi một món đồ (bạn chọn)",
+            "Thực hiện 10 lần squat.",
+            "Để nhóm xem thư viện ảnh của bạn trong 1 phút.",
+            "Đăng một bức ảnh xấu hổ lên story Instagram.",
+            "Nói giọng địa phương trong 3 vòng tiếp theo.",
+            "Để ai đó cù bạn trong 30 giây.",
         ],
         spicy: [
             "Hôn môi ai đó trong phòng trong 30 giây",
@@ -250,6 +345,11 @@ export const vi: Translations = {
             "Để ai đó uống rượu trên cơ thể bạn",
             "Nhắn tin sex với ai đó trong phòng trong 5 phút (cho xem tin nhắn)",
             "Tái hiện tư thế yêu thích của bạn với ai đó ở đây (mặc quần áo)",
+            "Nhảy twerk trong 1 phút.",
+            "Hôn má người bên phải bạn.",
+            "Để ai đó để lại dấu hickey (hoặc giả vờ).",
+            "Gửi tin nhắn mạo hiểm cho người yêu cũ.",
+            "Ăn một miếng trái cây một cách quyến rũ.",
         ],
         wild: [
             "Hôn người hấp dẫn nhất trong phòng trong 2 phút",
@@ -262,6 +362,11 @@ export const vi: Translations = {
             "Chia sẻ màn hình và mở lịch sử trình duyệt riêng tư",
             "Uống rượu trên cơ thể ai đó (họ chọn vị trí)",
             "Để ai đó cởi quần áo bạn đến đồ lót",
+            "Cởi áo ra.",
+            "Nhảy lap dance cho người đối diện.",
+            "Để nhóm chọn tin nhắn gửi cho crush của bạn.",
+            "Hôn kiểu Pháp người bên trái bạn.",
+            "Để ai đó viết gì đó lên cơ thể bạn bằng bút dạ.",
         ],
     },
 };

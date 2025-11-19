@@ -11,11 +11,19 @@ export default {
         'neon-blue': '#00D4FF',
         'neon-purple': '#B026FF',
         'neon-green': '#39FF14',
+        'purple': {
+          600: '#9333ea',
+          700: '#7e22ce',
+        },
+        'coral': {
+          500: '#ff6b6b',
+          600: '#ee5a6f',
+        },
       },
       fontFamily: {
-        'title': ['"Bebas Neue"', 'Arial', 'sans-serif'],
-        'heading': ['"Rajdhani"', 'Arial', 'sans-serif'],
-        'body': ['"Inter"', 'Arial', 'sans-serif'],
+        'title': ['"Oswald"', 'sans-serif'],
+        'heading': ['"Exo 2"', 'sans-serif'],
+        'body': ['"Nunito"', 'sans-serif'],
       },
     },
   },
