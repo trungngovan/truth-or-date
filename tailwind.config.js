@@ -13,9 +13,9 @@ export default {
         'neon-green': '#39FF14',
       },
       fontFamily: {
-        'title': ['Bebas Neue', 'sans-serif'],
-        'heading': ['Rajdhani', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
+        'title': ['"Bebas Neue"', 'Arial', 'sans-serif'],
+        'heading': ['"Rajdhani"', 'Arial', 'sans-serif'],
+        'body': ['"Inter"', 'Arial', 'sans-serif'],
       },
     },
   },
