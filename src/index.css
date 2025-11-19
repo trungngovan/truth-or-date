@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --neon-pink: #FF1493;
   --neon-blue: #00D4FF;
@@ -34,7 +35,7 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #000000;
@@ -173,4 +174,17 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* CRITICAL: Font family overrides with quotes - MUST be after Tailwind */
+.font-title {
+  font-family: "Bebas Neue", Arial, sans-serif !important;
+}
+
+.font-heading {
+  font-family: "Rajdhani", Arial, sans-serif !important;
+}
+
+.font-body {
+  font-family: "Inter", Arial, sans-serif !important;
 }
