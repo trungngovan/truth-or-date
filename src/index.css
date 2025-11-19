@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ensure fonts load properly */
+@layer base {
+  @font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW5rygbi49c.woff2) format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/rajdhani/v15/LDIxapCSOBg7S-QT7p4GM-Xe.woff2) format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/rajdhani/v15/LDIxapCSOBg7S-QT7q4HM-Xe.woff2) format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/rajdhani/v15/LDIxapCSOBg7S-QT7pbGM-Xe.woff2) format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2');
+  }
+}
+
 :root {
   --neon-pink: #FF1493;
   --neon-blue: #00D4FF;
