@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# This is an adult content website (18+)
+# Not intended for search engine indexing
